@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head><title>Instagram Auto Follower</title></head>
+<style>
+html{ height:100%; }
+body {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 20px;
+ height:100%; 
+}
+select  {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 20px;
+    width:250px;
+}
+input,button {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 20px;
+}
+
+#opfeatures td {
+    width:250px;
+}
+#opfeatures2 td {
+    width:250px;
+}
+</style>
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 10%;
+    min-height: 100%;
+    
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 90%;
+    border-left: none;
+   min-height: 100%;
+}
+</style>	
+<body >
+<!-- <h2 align="center">Instagram Auto Follower</h2> -->
+<!--<h2 align="center">Options page</h2>-->
+<div class="tab">
+<!--   <button class="tablinks"  id="Generall" >General</button>	 -->
+  <button class="tablinks"  id="Followl" >Follow</button>
+  <button class="tablinks" id="Unfollowl" >Unfollow</button>
+  <button class="tablinks" id="Othersl" >Likes</button>
+  <button class="tablinks" style="color:red;"  id="likelotteryl" >Get Pro Version for a day</button>
+  <!-- <button class="tablinks" id="scheduletweetsl" >Schedule Tweets</button> -->
+ <!-- <button class="tablinks" id="Likesl" >Likes</button>-->
+</div>
+
+<!-- <div id="General" class="tabcontent">
+  <h3>General Options</h3>
+  <table>
+   
+  </table>
+</div> -->
+
+<div id="Follow" class="tabcontent">
+  <h3>Follow Options</h3>
+   <table  id="opfeatures2"align="center">
+    <tr><td></td><td style="width:400px;">Follow Limit Per Action</td><td><input  style="width:80px;"  value=1000 id="igfollowlimit"></td><td></td></tr> 
+    <tr><td></td><td style="width:400px;">Dont follow these people</td><td><textarea  placeholder="rogerabc867&#10;ozymendes&#10;jhonatan_leal" style="width:200px;"   rows="4" cols="50" id="igdontfollowlist"></textarea></td><td></td></tr> 
+</table> 
+<br>
+<br>
+
+<br>
+<div id="status"align="center"></div>
+<br>
+<div align="center"><button id="save">Save Options</button></div>
+<br><br><br><br><br><br>
+  
+</div>
+
+<div id="Unfollow" class="tabcontent">
+  <h3>UnFollow Options</h3>
+   <table  id="opfeatures2"align="center">
+   <tr><td></td><td style="width:400px;">UnFollow Limit Per Action</td><td><input style="width:80px;" style="display:block;"  value=1000 id="igunfollowlimit"></td><td></td></tr> 
+           <tr><td></td><td><label>Only unfollow users who do not follow me </label> </td><td  width="400px"><input   style="    width: 22px;    height: 22px;"type="checkbox" id="nonfollows" disabled>(available in pro version)</td><td></td></tr> 
+   <tr><td></td><td style="width:400px;">Dont unfollow these people</td><td><textarea placeholder="rogerabc867&#10;ozymendes&#10;jhonatan_leal"  style="width:200px;"   rows="4" cols="50" id="igdontunfollowlist"></textarea></td><td></td></tr> 
+</table> 
+<br>
+<br>
+
+<br>
+<div id="statusunfollow"align="center"></div>
+<br>
+<div align="center"><button id="saveunfollow">Save Options</button></div>
+<br><br><br><br><br><br>
+</div>
+	
+<div id="Others" class="tabcontent">
+  <h3>Likes</h3>
+    <table>
+   <tr><td></td><td style="width:400px;">Likes Limit Per Action</td><td><input style="width:80px;" style="display:block;"  value=1000 id="iglikeslimit"></td><td></td></tr> 
+  </table>
+ 
+<br>
+<div id="statuslikes"align="center"></div>
+<br>
+<div align="center"><button id="savelikes">Save Options</button></div> 
+</div>
+<div id="likelottery" class="tabcontent">
+  <h3>Get Pro Version for a day</h3>
+    <table  style="display:none;">
+   <tr><td></td><td style="width:400px;">Enter the URL of the post you want likes for</td><td><input style="width:600px;" style="display:block;"  value='' id="iglikelotteryurl"></td><td>(check the example URL)</td></tr> 
+  </table>
+ 
+<br>
+<div id="statuslikelottery" align="center"></div>
+<br>
+<table>
+<tr>
+<!-- <td><div align="center"><button id="likelotterybutton">Save URL</button></div> </td> -->
+<td>
+<div align="center"><button id="checkrewardbutton" style="background:red;">Get Pro for a day</button></div> </td>
+<td id="registeredtoday">You are not registered for today</td></tr> 
+</table>
+<h4>How it works</h4>
+1. Click the red button<br>
+2. The app will automatically open new tab and like the yesterday's lottery winner's post<br>
+3. Once the app likes the post,the limits for the free version will be removed.<br>
+Note: The daily lottery will be held only for Pro Users. <br><br>
+Advice: <br>Around 1000-1500 unique users use this app every day.<br>
+ Assuming 500 users would press the button.It is 500 highest quality likes, which costs $30 generally. <br>
+If you buy pro version right now, you could easily win this lottery as there are not many people in Pro yet
+<h4><a href="http://bit.ly/2xWOUpC" target="_blank">Click to buy Pro Version</a></h4>
+
+</div>
+		
+	
+
+	
+
+
+<!--  <div align="center"><iframe  align="center" width="800px" height="400px"src="http://toolsfor.us/tweet/" style="border:none;"></iframe></div> -->
+<!-- <h4 align="center">If you want to verify whether its running..Go to Instagram page, press Cntrl+Shift+i and press console tab</h4> -->
+<script src="options.js"></script>
+</body>
+</html>

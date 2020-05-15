@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Instagram Auto Follower</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+      background: white;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    div {
+      cursor: pointer;
+      text-align: center;
+      padding: 1px 3px;
+      font-family: sans-serif;
+      font-size: 2em;
+      width: 100%;
+      margin-top: 1px;
+      background: #F33052;
+    }
+    div:hover {
+      background: #c92844;
+    }
+    #duration {
+      width: 60px;
+    }
+    #type {
+      height:34px;
+    }   
+      #duration2 {
+      width: 60px;
+    }
+    #type2{
+      height:34px;
+    }   
+  
+   
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  <table style="width:100%">
+  <tr><td><div><a href="https://toolsfor.us/support/"  type="text/css"target="_blank" style=" text-decoration:  none;color:black;" 
+				  title="Ask for new features or report issues">Chat with Dev</a></div></td></tr>
+ <tr><td><div id="tutorial">Tutorial</div></td></tr>                  
+    <tr>
+    <td>
+    <table style="width:100%">
+    <tr><td>Min Delay</td><td>
+    <input autocomplete="off" style="font-size: 2em;background:white;" value=10 title="Enter the duration" id="duration"></td>
+  <td><select style="font-size: 2em;background-color:#F33052;" title="Select the Unit"   id="type">
+      <option style="font-size: 1em;color:black;"value="sec">Sec</option>
+      <option style="font-size: 1em;color:black;" value="min">Min</option>
+      <option style="font-size: 1em;color:black;"value="hr">Hr</option>
+      <option style="font-size: 1em;color:black;"value="day">Day</option>
+    </select></td></tr>  </table>
+    </td>
+  </tr>
+   <tr>
+    <td>
+    <table style="width:100%">
+    <tr><td>Max Delay</td><td>
+    <input autocomplete="off" style="font-size: 2em;background:white;" value=30 title="Enter the duration" id="duration2"></td>
+  <td><select style="font-size: 2em;background-color:#F33052;" title="Select the Unit"   id="type2">
+      <option style="font-size: 1em;color:black;"value="sec">Sec</option>
+      <option style="font-size: 1em;color:black;" value="min">Min</option>
+      <option style="font-size: 1em;color:black;"value="hr">Hr</option>
+      <option style="font-size: 1em;color:black;"value="day">Day</option>
+    </select></td></tr>  </table>
+    </td>
+  </tr>
+  
+   <tr>
+    <td>
+    <table style="width:100%">
+    <tr><td title="Enter the number of follows/unfollows/like/retweets per interval time" >Number of clicks Per Interval</td><td>
+    <input autocomplete="off" style="font-size: 2em;background:white;width:40px;" value=1 title="Enter the number of follows/unfollows/like/retweets per interval time" id="clicks"></td>
+  </tr>  </table>
+    </td>
+  </tr>
+  
+    <tr><td><div id="autofollow" title="Auto Follow Users">Follow</div></td></tr>
+    <tr><td><div id="autounfollow" title="UnFollow Users">Unfollow</div>  </td></tr>
+    <tr><td><div id="autolike" title="Auto Like Tweets">Like</div></td></tr>
+    <tr><td><div id="autoremovelike" title="Remove my Likes on Tweets">Unlike</div></td></tr>
+    <tr><td><div id="stop">Stop</div></td></tr>  
+	<!-- <tr><td><div id="downloadfollowers">Download Followers</div></td></tr>   -->
+</table>
+  </body>
+</html>
